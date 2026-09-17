@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>avo42</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%234C7A3F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23FBF9F3'%3Ea%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --surface-100: #FBF9F3;
+    --surface-raised: #FFFFFF;
+    --ink: #1F2A1A;
+    --ink-secondary: #5B6B52;
+    --border: #DCE3D3;
+    --brand: #4C7A3F;
+    --brand-dark: #35592B;
+    --accent: #A97C50;
+    --font-display: "Space Grotesk", system-ui, sans-serif;
+    --font-sans: "Work Sans", system-ui, sans-serif;
+    --space-2: 8px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-full: 9999px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --surface-100: #171D14;
+      --surface-raised: #202A1B;
+      --ink: #F3F1E8;
+      --ink-secondary: #A9B69E;
+      --border: #38452F;
+      --brand: #7FB56A;
+      --brand-dark: #A7D093;
+      --accent: #D6A87A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --surface-100: #171D14;
+    --surface-raised: #202A1B;
+    --ink: #F3F1E8;
+    --ink-secondary: #A9B69E;
+    --border: #38452F;
+    --brand: #7FB56A;
+    --brand-dark: #A7D093;
+    --accent: #D6A87A;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-100);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-8) 0 0;
+  }
+  .badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--brand);
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .badge span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--surface-100);
+    line-height: 1;
+  }
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    color: var(--ink-secondary);
+  }
+  main { padding-bottom: var(--space-8); }
+  .hero {
+    padding: 72px 0 var(--space-8);
+  }
+  .kicker {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin: 0 0 var(--space-4);
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.08;
+    margin: 0 0 var(--space-4);
+    letter-spacing: -0.5px;
+  }
+  .lede {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-secondary);
+    max-width: 46ch;
+    margin: 0;
+  }
+  section {
+    padding: var(--space-8) 0;
+    border-top: 1px solid var(--border);
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 26px;
+    margin: 0 0 var(--space-4);
+    letter-spacing: -0.3px;
+  }
+  .contact-panel {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-8);
+  }
+  .field { margin-bottom: var(--space-6); }
+  .field:last-of-type { margin-bottom: 0; }
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: var(--space-2);
+  }
+  input, textarea {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--surface-100);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+  }
+  input:focus, textarea:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 1px;
+  }
+  textarea { resize: vertical; min-height: 120px; font-family: var(--font-sans); }
+  .submit-row {
+    margin-top: var(--space-8);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+  button {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background: var(--brand);
+    border: none;
+    border-radius: var(--radius-full);
+    padding: 13px 28px;
+    cursor: pointer;
+  }
+  button:hover { background: var(--brand-dark); }
+  button:focus-visible { outline: 2px solid var(--brand-dark); outline-offset: 2px; }
+  .submit-hint {
+    font-size: 13px;
+    color: var(--ink-secondary);
+  }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: var(--space-6) 0 var(--space-8);
+    font-size: 13px;
+    color: var(--ink-secondary);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge" aria-hidden="true"><span>a</span></span>
+      <span class="wordmark">avo42.com</span>
+    </header>
+
+    <main>
+      <section class="hero" style="border-top:none;">
+        <h1>Building digital ventures.</h1>
+        <p class="lede">A small studio that designs, builds and ships AI-powered digital
+          products — from first idea to something real people use.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Get in touch</h2>
+        <form class="contact-panel" action="mailto:m@avo42.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="submit-row">
+            <button type="submit">Send message</button>
+            <span class="submit-hint">Opens your email app, addressed to m@avo42.com.</span>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 avo42 — avo42.com
+    </footer>
+  </div>
+</body>
+</html>
