@@ -210,7 +210,7 @@
 
       <section id="contact">
         <h2>Get in touch</h2>
-        <form class="contact-panel" action="mailto:m@avo42.com" method="post" enctype="text/plain">
+        <form class="contact-panel" action="https://formsubmit.co/m@avo42.com" method="POST">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" required autocomplete="name">
@@ -225,7 +225,8 @@
           </div>
           <div class="submit-row">
             <button type="submit">Send message</button>
-            <span class="submit-hint">Opens your email app, addressed to m@avo42.com.</span>
+            <input type="hidden" name="_subject" value="New contact from avo42.com">
+            <input type="hidden" name="_captcha" value="false">
           </div>
         </form>
       </section>
