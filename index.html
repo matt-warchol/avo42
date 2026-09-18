@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>avo42</title>
+<title>avo42 — building digital ventures</title>
+<meta name="description" content="avo42 is a small studio that designs, builds and ships AI-powered digital products — from first idea to something real people use.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://avo42.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="avo42">
+<meta property="og:title" content="avo42 — building digital ventures">
+<meta property="og:description" content="A small studio that designs, builds and ships AI-powered digital products.">
+<meta property="og:url" content="https://avo42.com/">
+<meta property="og:image" content="https://avo42.com/avo42-logo-google.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%234C7A3F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23FBF9F3'%3Ea%3C/text%3E%3C/svg%3E">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R865RM483"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-0R865RM483');
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "avo42",
+  "url": "https://avo42.com/",
+  "description": "A small studio that designs, builds and ships AI-powered digital products.",
+  "email": "m@avo42.com"
+}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,15 +117,6 @@
   .hero {
     padding: 72px 0 var(--space-8);
   }
-  .kicker {
-    font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brand);
-    margin: 0 0 var(--space-4);
-  }
   h1 {
     font-family: var(--font-display);
     font-weight: 600;
@@ -136,83 +140,103 @@
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 26px;
-    margin: 0 0 var(--space-4);
+    margin: 0 0 var(--space-6);
     letter-spacing: -0.3px;
   }
-  .contact-panel {
+
+  /* portfolio */
+  .work-grid {
+    display: grid;
+    gap: var(--space-6);
+  }
+  .work-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .work-shot {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    margin-bottom: var(--space-4);
+    overflow: hidden;
+    background: var(--surface-raised);
+  }
+  .work-shot img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .work-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  .work-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-secondary);
+    margin: 0;
+  }
+  .work-flag {
+    display: inline-block;
+    margin-top: var(--space-2);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  /* contact */
+  .contact-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background: var(--surface-raised);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: var(--space-8);
+    padding: 48px var(--space-8);
   }
-  .field { margin-bottom: var(--space-6); }
-  .field:last-of-type { margin-bottom: 0; }
-  label {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: var(--space-2);
-  }
-  input, textarea {
-    width: 100%;
-    font-family: var(--font-sans);
-    font-size: 15px;
-    color: var(--ink);
-    background: var(--surface-100);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-  }
-  input:focus, textarea:focus {
-    outline: 2px solid var(--brand);
-    outline-offset: 1px;
-  }
-  textarea { resize: vertical; min-height: 120px; font-family: var(--font-sans); }
-  .submit-row {
-    margin-top: var(--space-8);
+  .mail-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-full);
+    background: var(--brand);
     display: flex;
     align-items: center;
-    gap: var(--space-4);
-    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--space-4);
   }
-  button {
-    font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 15px;
-    color: #fff;
-    background: var(--brand);
-    border: none;
-    border-radius: var(--radius-full);
-    padding: 13px 28px;
-    cursor: pointer;
-  }
-  button:hover { background: var(--brand-dark); }
-  button:focus-visible { outline: 2px solid var(--brand-dark); outline-offset: 2px; }
-  .submit-hint {
-    font-size: 13px;
+  .mail-icon svg { width: 24px; height: 24px; }
+  .contact-simple p {
+    margin: 0 0 var(--space-2);
     color: var(--ink-secondary);
+    font-size: 15px;
   }
-  .form-status {
-    margin-top: var(--space-4);
-    padding: 14px 18px;
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-    font-weight: 500;
+  .mail-link {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--brand);
+    text-decoration: none;
+    letter-spacing: -0.3px;
   }
-  .form-status.ok { background: #e8f5e2; color: #2d5a1e; }
-  .form-status.err { background: #fce8e8; color: #8b1a1a; }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .form-status.ok { background: #1e3a15; color: #a7d093; }
-    :root:not([data-theme="light"]) .form-status.err { background: #3a1515; color: #d09393; }
-  }
-  button:disabled { opacity: .55; cursor: default; }
+  .mail-link:hover { color: var(--brand-dark); text-decoration: underline; }
+
   footer {
     border-top: 1px solid var(--border);
     padding: var(--space-6) 0 var(--space-8);
     font-size: 13px;
     color: var(--ink-secondary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2);
   }
+  footer .tagline { color: var(--ink-secondary); }
 </style>
 </head>
 <body>
@@ -229,58 +253,52 @@
           products — from first idea to something real people use.</p>
       </section>
 
+      <section id="work">
+        <h2>What we've built</h2>
+        <div class="work-grid">
+          <a class="work-card" href="https://padeltune.wattmarchol.chatgpt.site/" target="_blank" rel="noopener">
+            <div class="work-shot">
+              <img src="img/padeltune-padel-training-app-screenshot.webp" width="960" height="655" loading="lazy" decoding="async" alt="PadelTune app — personal padel training dashboard with today's mobility session and weekly match schedule">
+            </div>
+            <p class="work-name">PadelTune</p>
+            <p class="work-desc">Personal padel training plans — strength, mobility and match prep, built around your game.</p>
+          </a>
+          <a class="work-card" href="https://readnext-reading-room.wattmarchol.chatgpt.site/" target="_blank" rel="noopener">
+            <div class="work-shot">
+              <img src="img/readnext-book-recommendation-app-screenshot.webp" width="960" height="658" loading="lazy" decoding="async" alt="ReadNext app — pick your next book from your Goodreads want-to-read shelf">
+            </div>
+            <p class="work-name">ReadNext</p>
+            <p class="work-desc">Turns your overflowing "want to read" shelf into one good pick for tonight.</p>
+          </a>
+          <a class="work-card" href="https://plateweek-ep2-varied-week.wattmarchol.chatgpt.site/" target="_blank" rel="noopener">
+            <div class="work-shot">
+              <img src="img/plateweek-weekly-meal-planning-app-screenshot.webp" width="960" height="644" loading="lazy" decoding="async" alt="PlateWeek app — recreated weekly meal plan with recipes and shopping list extracted from a cooking video">
+            </div>
+            <p class="work-name">PlateWeek</p>
+            <p class="work-desc">Turns a "what I eat in a day" video into real recipes and a shopping list you can make yourself.</p>
+          </a>
+        </div>
+      </section>
+
       <section id="contact">
         <h2>Get in touch</h2>
-        <form class="contact-panel" action="https://formsubmit.co/m@avo42.com" method="POST">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <div class="submit-row">
-            <button type="submit">Send message</button>
-            <input type="hidden" name="_subject" value="New contact from avo42.com">
-            <input type="hidden" name="_captcha" value="false">
-          </div>
-        </form>
+        <div class="contact-simple">
+          <span class="mail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FBF9F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 6-10 7L2 6"/>
+            </svg>
+          </span>
+          <p>Say hello</p>
+          <a class="mail-link" href="mailto:m@avo42.com">m@avo42.com</a>
+        </div>
       </section>
     </main>
 
     <footer>
-      &copy; 2026 avo42 — avo42.com
+      <span>&copy; 2026 avo42 — avo42.com</span>
+      <span class="tagline">Building digital ventures, one at a time.</span>
     </footer>
   </div>
-<script>
-document.querySelector('.contact-panel').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button');
-  const prev = btn.textContent;
-  btn.disabled = true;
-  btn.textContent = 'Sending…';
-  this.querySelector('.form-status')?.remove();
-  try {
-    const r = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
-    const msg = document.createElement('div');
-    msg.className = 'form-status ' + (r.ok ? 'ok' : 'err');
-    msg.textContent = r.ok ? 'Message sent — we\'ll be in touch.' : 'Something went wrong. Try emailing m@avo42.com directly.';
-    this.appendChild(msg);
-    if (r.ok) this.reset();
-  } catch {
-    const msg = document.createElement('div');
-    msg.className = 'form-status err';
-    msg.textContent = 'Network error. Try emailing m@avo42.com directly.';
-    this.appendChild(msg);
-  }
-  btn.disabled = false;
-  btn.textContent = prev;
-});
-</script>
 </body>
 </html>

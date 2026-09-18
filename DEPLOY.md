@@ -57,3 +57,27 @@ does mean m@avo42.com needs to exist as a real inbox for replies to land
 somewhere. If you'd rather have submissions post silently in the
 background, that needs a small form backend (e.g. Formspree) — say the
 word and I'll wire it in.
+
+## 5. If a carrier (e.g. T-Mobile Poland) flags the site as dangerous
+
+`index.html` now ships a meta description, Open Graph tags, a robots.txt
+and sitemap.xml, and an Organization schema block — the trust signals a
+one-page, form-only site is otherwise missing, which is what automated
+phishing filters key off of. That reduces the odds of a fresh block, but
+it can't retroactively clear one already in place; that block lives in
+the carrier's own threat-intel system, not anywhere under your control.
+
+T-Mobile Polska's filter (CyberTarcza / msec.t-mobile.pl) has no
+self-service unblock form. To get avo42.com reviewed, email their CERT
+directly (24/7 first-line):
+
+- **cert@t-mobile.pl** — phone +48 602 900 000
+- Say the domain is a legitimate new business site, ask for it to be
+  reviewed and removed from the block list.
+
+If it's also on CERT Polska's national warning list (many Polish carriers
+pull from it), you can check/report at https://cert.pl/lista-ostrzezen/
+or email cert@cert.pl; the formal appeal route if it's listed there is an
+objection to the president of UKE under the Electronic Communications
+Abuse Prevention Act — a heavier process, worth trying the T-Mobile
+email first.

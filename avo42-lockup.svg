@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 64" width="212" height="64">
+  <rect x="0" y="0" width="64" height="64" rx="15" fill="#4C7A3F"></rect>
+  <text x="32" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" text-anchor="middle" fill="#FBF9F3">a</text>
+  <text x="80" y="42" font-family="Space Grotesk, system-ui, sans-serif" font-size="30" font-weight="700" letter-spacing="-1" fill="#1F2A1A">avo42</text>
+</svg>
