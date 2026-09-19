@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "mentor.avo42.com" }],
+      "destination": "/mentor/$1"
+    }
+  ]
+}
