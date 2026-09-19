@@ -1,9 +1,14 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "has": [{ "type": "host", "value": "mentor.avo42.com" }],
-      "destination": "/mentor/$1"
+      "destination": "/mentor/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "mentor.avo42.com" }],
+      "destination": "/mentor/:path*"
     }
   ]
 }
